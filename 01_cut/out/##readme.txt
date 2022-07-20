@@ -1,0 +1,1 @@
+After cut the data, we need to fix the data back to the position where the average value is located at zero 
