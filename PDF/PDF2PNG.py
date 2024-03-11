@@ -18,7 +18,7 @@ def pdf_to_png(input_folder, output_folder):
             # 逐页将PDF文件转换为PNG图像
             for page_num in range(len(pdf_document)):
                 page = pdf_document.load_page(page_num)
-                pixmap = page.get_pixmap(alpha=False)
+                pixmap = page.get_pixmap(alpha=False, matrix=fitz.Matrix(3, 3), dpi=300)
                 pixmap.save(output_file_path,output = 'png')
                 #pixmap.save(output_file_path[:-4] + "_page%d" % page_num, output = 'png')                                  
 
